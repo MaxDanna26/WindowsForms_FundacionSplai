@@ -46,9 +46,9 @@ namespace Piloto
 
 
             MessageBox.Show(titulo + Environment.NewLine + location + Environment.NewLine + tipo + Environment.NewLine +
-        creticidad + Environment.NewLine + ambiente + Environment.NewLine + descripcion + Environment.NewLine +
-        fecha + Environment.NewLine + horas + Environment.NewLine + estado + Environment.NewLine +
-        porcentaje + Environment.NewLine + email);
+            creticidad + Environment.NewLine + ambiente + Environment.NewLine + descripcion + Environment.NewLine +
+            fecha + Environment.NewLine + horas + Environment.NewLine + estado + Environment.NewLine +
+            porcentaje + Environment.NewLine + email);
 
         }
 

@@ -1,0 +1,10 @@
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\bin\Debug\WindowsFormsConectados.exe.config
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\bin\Debug\WindowsFormsConectados.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\bin\Debug\WindowsFormsConectados.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\obj\Debug\WindowsFormsConectados.csproj.AssemblyReference.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\obj\Debug\WindowsFormsConectados.Form1.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\obj\Debug\WindowsFormsConectados.Properties.Resources.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\obj\Debug\WindowsFormsConectados.csproj.GenerateResource.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\obj\Debug\WindowsFormsConectados.csproj.CoreCompileInputs.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\obj\Debug\WindowsFormsConectados.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WindowsFormsConectados\WindowsFormsConectados\obj\Debug\WindowsFormsConectados.pdb

@@ -8,3 +8,13 @@ C:\Users\Maxim\OneDrive\Escritorio\.net\Piloto\Piloto\obj\Debug\Piloto.csproj.Ge
 C:\Users\Maxim\OneDrive\Escritorio\.net\Piloto\Piloto\obj\Debug\Piloto.csproj.CoreCompileInputs.cache
 C:\Users\Maxim\OneDrive\Escritorio\.net\Piloto\Piloto\obj\Debug\Piloto.exe
 C:\Users\Maxim\OneDrive\Escritorio\.net\Piloto\Piloto\obj\Debug\Piloto.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\bin\Debug\Piloto.exe.config
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\bin\Debug\Piloto.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\bin\Debug\Piloto.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\obj\Debug\Piloto.csproj.AssemblyReference.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\obj\Debug\Piloto.FormPrincipal.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\obj\Debug\Piloto.Properties.Resources.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\obj\Debug\Piloto.csproj.GenerateResource.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\obj\Debug\Piloto.csproj.CoreCompileInputs.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\obj\Debug\Piloto.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Piloto\Piloto\obj\Debug\Piloto.pdb
