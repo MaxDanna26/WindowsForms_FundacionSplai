@@ -16,6 +16,7 @@ namespace Hospital_WindowsForm.Forms
         public FormPaciente(string nombre,string apellido,string dni)
         {
             InitializeComponent();
+
             txtBoxNombre.Text = nombre;
             txtBoxApellido.Text = apellido;
             txtBoxDni.Text = dni;
@@ -24,8 +25,7 @@ namespace Hospital_WindowsForm.Forms
 
             foreach (Doctor doctor in FormHospital.fundacionSplai.Doctores)
             {
-                string listadoDoctores = doctor.GetName;
-                listBoxDoctores.Items.Add(listadoDoctores);
+                listBoxDoctores.Items.Add(doctor);
             }
         }
 
@@ -36,13 +36,15 @@ namespace Hospital_WindowsForm.Forms
 
         private void btnCrearDoctor_Click(object sender, EventArgs e)
         {
-            //string nombre = txtBoxNombre.Text;
-            //string apellido =   txtBoxApellido.Text;
-            //string dni = txtBoxDni.Text;
+            string nombre = txtBoxNombre.Text;
+            string apellido = txtBoxApellido.Text;
+            string dni = txtBoxDni.Text;
+            Doctor doctorSeleccionado = listBoxDoctores.SelectedItem as Doctor;
+            int idDoctor = doctorSeleccionado.IdDoctor;
 
+            Paciente paciente = new Paciente(nombre,apellido,dni,idDoctor);
 
-
-            //Paciente paciente = new Paciente(nombre,apellido,dni,idDoctor);
+            MessageBox.Show("Paciente Creado Correctamente!");
         }
     }
 }

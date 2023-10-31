@@ -9,6 +9,11 @@ namespace Hospital_WindowsForm
     public class Doctor : Personas
     {
         private int idDoctor;
+        public int IdDoctor
+        {
+            get => idDoctor;
+        }        
+        
         private List<Paciente> pacientes;
 
         public Doctor(string nombre,string apellido,string dni,int idDoctor) : base(nombre,apellido,dni)
@@ -17,15 +22,11 @@ namespace Hospital_WindowsForm
             pacientes = new List<Paciente>();
         }
 
-        public override string GetName
+        public override string ToString()
         {
-            get => $"{nombre},{apellido} con el ID {idDoctor} ";
+            return $"{nombre},{apellido} de id {idDoctor}";
         }
 
-        public int GetIdDoctor
-        {
-            get => idDoctor;
-        }
 
 
     }
