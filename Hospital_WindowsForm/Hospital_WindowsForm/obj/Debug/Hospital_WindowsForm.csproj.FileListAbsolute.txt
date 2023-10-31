@@ -1,0 +1,13 @@
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\bin\Debug\Hospital_WindowsForm.exe.config
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\bin\Debug\Hospital_WindowsForm.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\bin\Debug\Hospital_WindowsForm.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.csproj.AssemblyReference.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.FormHospital.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.Properties.Resources.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.csproj.GenerateResource.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.csproj.CoreCompileInputs.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.Forms.FormIngresar.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.Forms.FormDoctor.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.Forms.FormPaciente.resources

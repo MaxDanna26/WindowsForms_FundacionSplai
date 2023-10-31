@@ -40,6 +40,7 @@
             this.textBoxSexo = new System.Windows.Forms.TextBox();
             this.Submit = new System.Windows.Forms.Button();
             this.DeleteFecha = new System.Windows.Forms.CheckBox();
+            this.btnNewForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DateTime
@@ -56,6 +57,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(123, 24);
             this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ShowCheckBox = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(299, 26);
             this.dateTimePicker1.TabIndex = 1;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -167,12 +169,23 @@
             this.DeleteFecha.UseVisualStyleBackColor = true;
             this.DeleteFecha.CheckedChanged += new System.EventHandler(this.DeleteFecha_CheckedChanged);
             // 
+            // btnNewForm
+            // 
+            this.btnNewForm.Location = new System.Drawing.Point(355, 358);
+            this.btnNewForm.Name = "btnNewForm";
+            this.btnNewForm.Size = new System.Drawing.Size(88, 34);
+            this.btnNewForm.TabIndex = 13;
+            this.btnNewForm.Text = "btnNewForm";
+            this.btnNewForm.UseVisualStyleBackColor = true;
+            this.btnNewForm.Click += new System.EventHandler(this.btnNewForm_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnNewForm);
             this.Controls.Add(this.DeleteFecha);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.textBoxSexo);
@@ -206,6 +219,7 @@
         private System.Windows.Forms.TextBox textBoxSexo;
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.CheckBox DeleteFecha;
+        private System.Windows.Forms.Button btnNewForm;
     }
 }
 

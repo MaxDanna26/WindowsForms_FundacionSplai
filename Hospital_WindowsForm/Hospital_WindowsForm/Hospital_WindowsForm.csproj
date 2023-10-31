@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{67434E5F-932F-4DB6-A953-39A120595F34}</ProjectGuid>
+    <ProjectGuid>{2394488A-2431-476F-9FC0-2C104D785F9B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsConectados</RootNamespace>
-    <AssemblyName>WindowsFormsConectados</AssemblyName>
+    <RootNamespace>Hospital_WindowsForm</RootNamespace>
+    <AssemblyName>Hospital_WindowsForm</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,25 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormN.cs">
+    <Compile Include="Forms\FormDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormN.Designer.cs">
-      <DependentUpon>FormN.cs</DependentUpon>
+    <Compile Include="Forms\FormDoctor.Designer.cs">
+      <DependentUpon>FormDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormIngresar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormIngresar.Designer.cs">
+      <DependentUpon>FormIngresar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPaciente.Designer.cs">
+      <DependentUpon>FormPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Doctor.cs" />
+    <Compile Include="Modelos\Hospital.cs" />
+    <Compile Include="Modelos\Paciente.cs" />
+    <Compile Include="Modelos\Personas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormN.resx">
-      <DependentUpon>FormN.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormDoctor.resx">
+      <DependentUpon>FormDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormIngresar.resx">
+      <DependentUpon>FormIngresar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPaciente.resx">
+      <DependentUpon>FormPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
