@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSexo = new System.Windows.Forms.TextBox();
             this.Submit = new System.Windows.Forms.Button();
+            this.DeleteFecha = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // DateTime
@@ -155,12 +156,24 @@
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = false;
             // 
+            // DeleteFecha
+            // 
+            this.DeleteFecha.AutoSize = true;
+            this.DeleteFecha.Location = new System.Drawing.Point(445, 56);
+            this.DeleteFecha.Name = "DeleteFecha";
+            this.DeleteFecha.Size = new System.Drawing.Size(127, 24);
+            this.DeleteFecha.TabIndex = 12;
+            this.DeleteFecha.Text = "DeleteFecha";
+            this.DeleteFecha.UseVisualStyleBackColor = true;
+            this.DeleteFecha.CheckedChanged += new System.EventHandler(this.DeleteFecha_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DeleteFecha);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.textBoxSexo);
             this.Controls.Add(this.label1);
@@ -192,6 +205,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSexo;
         private System.Windows.Forms.Button Submit;
+        private System.Windows.Forms.CheckBox DeleteFecha;
     }
 }
 

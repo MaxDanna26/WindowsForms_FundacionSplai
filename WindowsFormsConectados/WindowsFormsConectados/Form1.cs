@@ -72,5 +72,11 @@ namespace WindowsFormsConectados
 
 
         }
+
+        private void DeleteFecha_CheckedChanged(object sender, EventArgs e)
+        {
+            if(DeleteFecha.Checked) dateTimePicker1.Visible = false;
+            else dateTimePicker1.Visible = true;
+        }
     }   
 }
