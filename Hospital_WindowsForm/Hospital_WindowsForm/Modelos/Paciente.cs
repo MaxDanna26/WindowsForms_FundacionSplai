@@ -21,6 +21,7 @@ namespace Hospital_WindowsForm
             get => $"El paciente tiene cita con el Doctor {idDoctor}.";
         }
 
+
         public Paciente(string nombre, string apellido, string dni,int idDoctor) : base(nombre,apellido,dni)
         {
             this.idDoctor = idDoctor;

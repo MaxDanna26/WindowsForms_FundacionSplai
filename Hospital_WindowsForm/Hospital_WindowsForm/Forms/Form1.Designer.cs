@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHospital));
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -38,7 +37,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(78, 84);
+            this.btnAdd.Location = new System.Drawing.Point(78, 124);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(141, 56);
             this.btnAdd.TabIndex = 0;
@@ -46,22 +45,13 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(78, 199);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(141, 56);
-            this.btnRemove.TabIndex = 1;
-            this.btnRemove.Text = "Eliminar Datos";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(78, 317);
+            this.btnListar.Location = new System.Drawing.Point(68, 219);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(141, 56);
+            this.btnListar.Size = new System.Drawing.Size(160, 56);
             this.btnListar.TabIndex = 2;
-            this.btnListar.Text = "Ver Datos";
+            this.btnListar.Text = "Ver y Eliminar Datos";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
@@ -81,11 +71,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Name = "FormHospital";
             this.Text = "Hospital Fundacion Splai";
@@ -97,7 +87,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
