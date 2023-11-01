@@ -12,6 +12,10 @@ namespace Hospital_WindowsForm
     {
         private int idDoctor;
 
+        public int IdDoctor
+        {
+            get => idDoctor;
+        }
         public string CitaPaciente
         {
             get => $"El paciente tiene cita con el Doctor {idDoctor}.";
@@ -22,6 +26,10 @@ namespace Hospital_WindowsForm
             this.idDoctor = idDoctor;
         }
 
+        public override string ToString()
+        {
+            return $"{nombre},{apellido} de DNI {dni}";
+        }
 
 
     }

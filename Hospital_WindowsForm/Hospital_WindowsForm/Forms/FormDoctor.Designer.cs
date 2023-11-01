@@ -125,6 +125,7 @@
             this.btnCrearDoctor.TabIndex = 13;
             this.btnCrearDoctor.Text = "Crear Doctor";
             this.btnCrearDoctor.UseVisualStyleBackColor = true;
+            this.btnCrearDoctor.Click += new System.EventHandler(this.btnCrearDoctor_Click);
             // 
             // btnVolver
             // 

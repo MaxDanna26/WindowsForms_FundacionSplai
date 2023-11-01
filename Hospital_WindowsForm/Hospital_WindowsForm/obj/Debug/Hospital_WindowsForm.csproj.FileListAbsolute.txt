@@ -11,3 +11,4 @@ C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_Win
 C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.Forms.FormIngresar.resources
 C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.Forms.FormDoctor.resources
 C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.Forms.FormPaciente.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\Hospital_WindowsForm\Hospital_WindowsForm\obj\Debug\Hospital_WindowsForm.Forms.FormVerDatos.resources

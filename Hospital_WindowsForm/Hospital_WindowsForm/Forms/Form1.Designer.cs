@@ -63,6 +63,7 @@
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Ver Datos";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // pictureBox1
             // 

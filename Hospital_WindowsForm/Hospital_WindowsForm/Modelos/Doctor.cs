@@ -9,6 +9,12 @@ namespace Hospital_WindowsForm
     public class Doctor : Personas
     {
         private int idDoctor;
+        private string matricula;
+        public string Matricula
+        {
+            get => matricula;
+        }
+
         public int IdDoctor
         {
             get => idDoctor;
@@ -16,9 +22,10 @@ namespace Hospital_WindowsForm
         
         private List<Paciente> pacientes;
 
-        public Doctor(string nombre,string apellido,string dni,int idDoctor) : base(nombre,apellido,dni)
+        public Doctor(string nombre,string apellido,string dni,int idDoctor,string matricula) : base(nombre,apellido,dni)
         {
             this.idDoctor = idDoctor;
+            this.matricula = matricula;
             pacientes = new List<Paciente>();
         }
 

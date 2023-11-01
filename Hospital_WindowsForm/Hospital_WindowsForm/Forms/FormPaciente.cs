@@ -44,7 +44,18 @@ namespace Hospital_WindowsForm.Forms
 
             Paciente paciente = new Paciente(nombre,apellido,dni,idDoctor);
 
-            MessageBox.Show("Paciente Creado Correctamente!");
+            try
+            {
+                FormHospital.fundacionSplai.Pacientes.Add(paciente);
+                MessageBox.Show("Paciente Creado Correctamente!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al crear el paciente: " + ex.Message);
+                throw;
+            }
+
+
         }
     }
 }
