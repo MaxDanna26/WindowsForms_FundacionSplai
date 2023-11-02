@@ -12,7 +12,7 @@ namespace Hospital_WindowsForm
         private string matricula;
         public string Matricula
         {
-            get => matricula;
+            get => matricula; set => matricula = value; 
         }
 
         public int IdDoctor

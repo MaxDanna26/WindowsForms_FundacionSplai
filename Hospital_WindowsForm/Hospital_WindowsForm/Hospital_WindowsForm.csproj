@@ -58,6 +58,18 @@
     <Compile Include="Forms\FormDoctor.Designer.cs">
       <DependentUpon>FormDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormEditarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditarPaciente.Designer.cs">
+      <DependentUpon>FormEditarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditDoctor.Designer.cs">
+      <DependentUpon>FormEditDoctor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormIngresar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDoctor.resx">
       <DependentUpon>FormDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditarPaciente.resx">
+      <DependentUpon>FormEditarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditDoctor.resx">
+      <DependentUpon>FormEditDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormIngresar.resx">
       <DependentUpon>FormIngresar.cs</DependentUpon>

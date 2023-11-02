@@ -40,6 +40,22 @@ namespace Hospital_WindowsForm.Forms
             RefreshData(listBoxListar, selectedOption);
 
         }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if(listBoxListar.SelectedItem is Paciente)
+            {
+                Paciente pacienteAeditar = listBoxListar.SelectedItem as Paciente;
+                FormEditarPaciente editarPaciente = new FormEditarPaciente(pacienteAeditar);
+                editarPaciente.ShowDialog();
+            }
+            else
+            {
+                Doctor doctorAeditar = listBoxListar.SelectedItem as Doctor;
+                FormEditDoctor editarDoctor = new FormEditDoctor(doctorAeditar);
+                editarDoctor.ShowDialog();
+            }
+            this.Close();
+        }
 
         private void FormVerDatos_Load(object sender, EventArgs e)
         {
@@ -119,6 +135,8 @@ namespace Hospital_WindowsForm.Forms
                 }
             }
         }
+
+
     }
 
 

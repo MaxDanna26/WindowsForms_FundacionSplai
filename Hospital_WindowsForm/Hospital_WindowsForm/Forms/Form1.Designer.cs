@@ -51,7 +51,7 @@
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(160, 56);
             this.btnListar.TabIndex = 2;
-            this.btnListar.Text = "Ver y Eliminar Datos";
+            this.btnListar.Text = "Manipular Data";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 

@@ -27,28 +27,36 @@ namespace Hospital_WindowsForm.Forms
             string apellido = txtBoxApellido.Text;
             string dni = txtBoxDni.Text;
             string matricula = textBox1.Text;
-
-            Doctor ultimoDoctor = FormHospital.fundacionSplai.Doctores.FindLast(p => true);
-
-            int idUltimoDoctor = 0;
-
-            if (ultimoDoctor != null)
+            if(matricula == "")
             {
-                idUltimoDoctor = ultimoDoctor.IdDoctor;
+                MessageBox.Show("No ha ingresado ninguna matricula!");
+            }
+            else
+            {
+                Doctor ultimoDoctor = FormHospital.fundacionSplai.Doctores.FindLast(p => true);
+
+                int idUltimoDoctor = 0;
+
+                if (ultimoDoctor != null)
+                {
+                    idUltimoDoctor = ultimoDoctor.IdDoctor;
+                }
+
+                try
+                {
+                    Doctor newDoctor = new Doctor(nombre, apellido, dni, (idUltimoDoctor + 1), matricula);
+                    FormHospital.fundacionSplai.Doctores.Add(newDoctor);
+                    MessageBox.Show("Doctor Creado Correctamente!");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al crear el doctor: " + ex.Message);
+                    throw;
+                }
             }
 
-            try
-            {
-                Doctor newDoctor = new Doctor(nombre, apellido, dni, (idUltimoDoctor + 1), matricula);
-                FormHospital.fundacionSplai.Doctores.Add(newDoctor);
-                MessageBox.Show("Doctor Creado Correctamente!");
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al crear el doctor: " + ex.Message);
-                throw;
-            }
+
 
         }
 

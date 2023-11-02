@@ -14,7 +14,7 @@ namespace Hospital_WindowsForm
 
         public int IdDoctor
         {
-            get => idDoctor;
+            get => idDoctor; set => idDoctor = value;
         }
         public string CitaPaciente
         {

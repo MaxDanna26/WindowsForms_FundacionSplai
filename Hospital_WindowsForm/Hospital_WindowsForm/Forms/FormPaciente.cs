@@ -29,11 +29,6 @@ namespace Hospital_WindowsForm.Forms
             }
         }
 
-        private void FormPaciente_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCrearDoctor_Click(object sender, EventArgs e)
         {
             string nombre = txtBoxNombre.Text;
