@@ -34,6 +34,8 @@ namespace Hospital_WindowsForm.Forms
                 FormPaciente formPaciente = new FormPaciente(nombre, apellido, dni);
                 formPaciente.ShowDialog();
             }
+
+            this.Close();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

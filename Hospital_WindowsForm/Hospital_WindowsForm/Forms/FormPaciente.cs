@@ -40,23 +40,33 @@ namespace Hospital_WindowsForm.Forms
             string apellido = txtBoxApellido.Text;
             string dni = txtBoxDni.Text;
             Doctor doctorSeleccionado = listBoxDoctores.SelectedItem as Doctor;
-            int idDoctor = doctorSeleccionado.IdDoctor;
 
-            Paciente paciente = new Paciente(nombre,apellido,dni,idDoctor);
+            int idDoctor = 0;
 
-            try
+            if(doctorSeleccionado == null)
             {
-                FormHospital.fundacionSplai.Pacientes.Add(paciente);
-                MessageBox.Show("Paciente Creado Correctamente!");
+                MessageBox.Show("No ha seleccionado ningun doctor!");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al crear el paciente: " + ex.Message);
-                throw;
-            }
+                idDoctor = doctorSeleccionado.IdDoctor; 
+                Paciente paciente = new Paciente(nombre, apellido, dni, idDoctor);
 
+                try
+                {
+                    FormHospital.fundacionSplai.Pacientes.Add(paciente);
+                    MessageBox.Show("Paciente Creado Correctamente!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al crear el paciente: " + ex.Message);
+                    throw;
+                }
+                this.Close();
+            }
 
         }
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();

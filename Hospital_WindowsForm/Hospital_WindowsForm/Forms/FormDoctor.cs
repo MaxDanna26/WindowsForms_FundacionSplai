@@ -42,6 +42,7 @@ namespace Hospital_WindowsForm.Forms
                 Doctor newDoctor = new Doctor(nombre, apellido, dni, (idUltimoDoctor + 1), matricula);
                 FormHospital.fundacionSplai.Doctores.Add(newDoctor);
                 MessageBox.Show("Doctor Creado Correctamente!");
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -51,7 +52,7 @@ namespace Hospital_WindowsForm.Forms
 
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void btnVolver_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

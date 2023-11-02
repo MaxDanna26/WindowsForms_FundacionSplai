@@ -30,13 +30,13 @@
         {
             this.comboBoxListar = new System.Windows.Forms.ComboBox();
             this.listBoxListar = new System.Windows.Forms.ListBox();
-            this.btnVerDatos = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBoxListar
             // 
+            this.comboBoxListar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxListar.FormattingEnabled = true;
             this.comboBoxListar.Items.AddRange(new object[] {
             "Listar Personas",
@@ -46,6 +46,7 @@
             this.comboBoxListar.Name = "comboBoxListar";
             this.comboBoxListar.Size = new System.Drawing.Size(439, 28);
             this.comboBoxListar.TabIndex = 0;
+            this.comboBoxListar.SelectedIndexChanged += new System.EventHandler(this.comboBoxListar_SelectedIndexChanged);
             // 
             // listBoxListar
             // 
@@ -56,19 +57,9 @@
             this.listBoxListar.Size = new System.Drawing.Size(439, 264);
             this.listBoxListar.TabIndex = 1;
             // 
-            // btnVerDatos
-            // 
-            this.btnVerDatos.Location = new System.Drawing.Point(590, 55);
-            this.btnVerDatos.Name = "btnVerDatos";
-            this.btnVerDatos.Size = new System.Drawing.Size(124, 59);
-            this.btnVerDatos.TabIndex = 2;
-            this.btnVerDatos.Text = "Ver datos";
-            this.btnVerDatos.UseVisualStyleBackColor = true;
-            this.btnVerDatos.Click += new System.EventHandler(this.btnVerDatos_Click);
-            // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(590, 240);
+            this.btnVolver.Location = new System.Drawing.Point(581, 266);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(124, 59);
             this.btnVolver.TabIndex = 3;
@@ -78,7 +69,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(590, 147);
+            this.btnDelete.Location = new System.Drawing.Point(581, 173);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(124, 59);
             this.btnDelete.TabIndex = 4;
@@ -94,11 +85,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnVerDatos);
             this.Controls.Add(this.listBoxListar);
             this.Controls.Add(this.comboBoxListar);
             this.Name = "FormVerDatos";
             this.Text = "FormVerDatos";
+            this.Load += new System.EventHandler(this.FormVerDatos_Load);
             this.ResumeLayout(false);
 
         }
@@ -107,7 +98,6 @@
 
         private System.Windows.Forms.ComboBox comboBoxListar;
         private System.Windows.Forms.ListBox listBoxListar;
-        private System.Windows.Forms.Button btnVerDatos;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnDelete;
     }
