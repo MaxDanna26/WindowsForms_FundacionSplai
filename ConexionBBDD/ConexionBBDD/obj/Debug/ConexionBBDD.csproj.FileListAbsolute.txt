@@ -1,0 +1,10 @@
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\bin\Debug\ConexionBBDD.exe.config
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\bin\Debug\ConexionBBDD.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\bin\Debug\ConexionBBDD.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.csproj.AssemblyReference.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.Form1.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.Properties.Resources.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.csproj.GenerateResource.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.csproj.CoreCompileInputs.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.pdb
