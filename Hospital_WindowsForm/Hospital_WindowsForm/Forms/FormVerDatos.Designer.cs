@@ -80,12 +80,13 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEdit.Location = new System.Drawing.Point(581, 80);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(124, 59);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Editar Datos";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // FormVerDatos
