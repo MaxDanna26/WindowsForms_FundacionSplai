@@ -22,8 +22,6 @@ namespace ConexionBBDD
 
        private List<Jobs> SelectJobs()
         {
-            connection.Open(); 
-
             List<Jobs> jobs = new List<Jobs>();
 
             string query = "SELECT * FROM JOBS";
@@ -53,8 +51,6 @@ namespace ConexionBBDD
             }
 
             records.Close();
-
-            connection.Close();
 
             return jobs;
 
