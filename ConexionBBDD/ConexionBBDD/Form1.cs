@@ -22,6 +22,8 @@ namespace ConexionBBDD
 
        private List<Jobs> SelectJobs()
         {
+            connection.Open(); 
+
             List<Jobs> jobs = new List<Jobs>();
 
             string query = "SELECT * FROM JOBS";
@@ -52,7 +54,10 @@ namespace ConexionBBDD
 
             records.Close();
 
+            connection.Close();
+
             return jobs;
+
 
         }
 
@@ -61,10 +66,9 @@ namespace ConexionBBDD
             if(listBoxJobs.SelectedItems.Count > 0)
             {
                 Jobs job = listBoxJobs.SelectedItem as Jobs;
-
-                job.JobTitle = txtNombre.Text;
-                job.Min_salary = Convert.ToDecimal(txtMin.Text);
-                job.Max_salary = Convert.ToDecimal(txtMin.Text);
+                txtNombre.Text = job.JobTitle;
+                txtMin.Text = Convert.ToString(job.Min_salary);
+                txtMax.Text = Convert.ToString(job.Max_salary);
             }
         } 
 
@@ -149,8 +153,6 @@ namespace ConexionBBDD
                 listBoxJobs.Items.Add(job);
             }
 
-
-            SelectedJob();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -213,18 +215,23 @@ namespace ConexionBBDD
             else
                 max_salary = decimal.Parse(txtMax.Text);
 
-            Jobs jobs = new Jobs(job_id,nombre,min_salary,max_salary);
-
-
-            try
+            if (string.IsNullOrEmpty(nombre))
             {
-                InsertJob(jobs);
-                MessageBox.Show("Job insertado con exito!");
+                MessageBox.Show("No ha ingresado el nombre del job!");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al conectarse! " + ex.Message);
-                throw;
+                Jobs jobs = new Jobs(job_id, nombre, min_salary, max_salary);
+                try
+                {
+                    InsertJob(jobs);
+                    MessageBox.Show("Job insertado con exito!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al conectarse! " + ex.Message);
+                    throw;
+                }
             }
 
         }
@@ -233,25 +240,34 @@ namespace ConexionBBDD
         {
             Jobs jobToDelete = listBoxJobs.SelectedItem as Jobs;
 
-            int IdToDelete = jobToDelete.Job_Id;
-
-            string query = "DELETE FROM JOBS WHERE job_id = @IdToDelete";
-            SqlCommand command = new SqlCommand(query, connection);
-
-            // Agregar el parámetro
-            command.Parameters.AddWithValue("@IdToDelete", IdToDelete);
-
-            // Ejecutar la consulta
-            int rowsAffected = command.ExecuteNonQuery();
-
-            if (rowsAffected > 0)
+            if(jobToDelete == null)
             {
-                MessageBox.Show("Se ha eliminado el trabajo con ID " + IdToDelete);
+                MessageBox.Show("No has seleccionado ningun job!");
             }
             else
             {
-                MessageBox.Show("No se encontró ningún trabajo con ID " + IdToDelete);
+                int IdToDelete = jobToDelete.Job_Id;
+
+                string query = "DELETE FROM JOBS WHERE job_id = @IdToDelete";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                // Agregar el parámetro
+                command.Parameters.AddWithValue("@IdToDelete", IdToDelete);
+
+                // Ejecutar la consulta
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Se ha eliminado el trabajo con ID " + IdToDelete);
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ningún trabajo con ID " + IdToDelete);
+                }
             }
+
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -290,6 +306,11 @@ namespace ConexionBBDD
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBoxJobs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedJob();
         }
     }
 }

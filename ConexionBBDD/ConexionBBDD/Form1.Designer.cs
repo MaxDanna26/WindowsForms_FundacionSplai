@@ -144,6 +144,7 @@
             this.listBoxJobs.Name = "listBoxJobs";
             this.listBoxJobs.Size = new System.Drawing.Size(347, 204);
             this.listBoxJobs.TabIndex = 15;
+            this.listBoxJobs.SelectedIndexChanged += new System.EventHandler(this.listBoxJobs_SelectedIndexChanged);
             // 
             // btnRefresh
             // 
