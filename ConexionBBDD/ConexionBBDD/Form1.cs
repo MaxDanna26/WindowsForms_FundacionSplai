@@ -56,6 +56,68 @@ namespace ConexionBBDD
 
         }
 
+       private void SelectedJob()
+        {
+            if(listBoxJobs.SelectedItems.Count > 0)
+            {
+                Jobs job = listBoxJobs.SelectedItem as Jobs;
+
+                job.JobTitle = txtNombre.Text;
+                job.Min_salary = Convert.ToDecimal(txtMin.Text);
+                job.Max_salary = Convert.ToDecimal(txtMin.Text);
+            }
+        } 
+
+       private void EditJobs(Jobs jobToEdit)
+        {
+            if (jobToEdit == null)
+            {
+                MessageBox.Show("No ha seleccionado ningun Job!");
+            }
+            else
+            {
+                string query = "UPDATE JOBS SET job_title = @NewJobTitle," +
+                               "min_salary = @NewMinSalary," +
+                               "max_salary = @NewMaxSalary " +
+                               "WHERE job_id = @JobId";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                string txtMinSalary = txtMin.Text;
+                string txtMaxSalary = txtMax.Text;
+
+                decimal? min_salary = 0;
+                decimal? max_salary = 0;
+
+                if (!string.IsNullOrEmpty(txtMinSalary))
+                {
+                    min_salary = decimal.Parse(txtMin.Text);
+                }
+                else
+                {
+                    min_salary = null;
+                }
+
+                if (!string.IsNullOrEmpty(txtMaxSalary))
+                {
+                    max_salary = decimal.Parse(txtMax.Text);
+                }
+                else
+                {
+                    max_salary = null;
+                }
+
+                command.Parameters.AddWithValue("@NewJobTitle", txtNombre.Text);
+                command.Parameters.AddWithValue("@NewMinSalary", (min_salary != null) ? (object)min_salary : DBNull.Value);
+                command.Parameters.AddWithValue("@NewMaxSalary", (max_salary != null) ? (object)max_salary : DBNull.Value);
+                command.Parameters.AddWithValue("@JobId", jobToEdit.Job_Id);
+
+                int affected = command.ExecuteNonQuery();
+
+                if (affected == 0) MessageBox.Show("No se ha modificado nada!");
+                else MessageBox.Show("Se ha editado correctamente!");
+            }
+        }
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
@@ -80,7 +142,15 @@ namespace ConexionBBDD
                 MessageBox.Show("Error al intentar conectarse a la BBDD!" + ex.Message);
             }
 
+            List<Jobs> items = SelectJobs();
 
+            foreach (Jobs job in items)
+            {
+                listBoxJobs.Items.Add(job);
+            }
+
+
+            SelectedJob();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -103,32 +173,47 @@ namespace ConexionBBDD
         private void InsertJob(Jobs jobs)
         {
             string query = $"INSERT INTO JOBS(job_title,min_salary,max_salary) " +
-                           $"VALUES ('{jobs.JobTitle}','{jobs.Min_salary}','{jobs.Max_salary}'); " +
+                           $"VALUES (@JobTitle,@MinSalary,@MaxSalary); " +
                            $"SELECT Scope_Identity()";
             SqlCommand command = new SqlCommand(query, connection);
 
-            //command.ExecuteScalar();
+            command.Parameters.AddWithValue("@JobTitle", jobs.JobTitle);
+
+            
+            if(jobs.Min_salary == null)
+                command.Parameters.AddWithValue("@MinSalary", DBNull.Value);
+            else 
+                command.Parameters.AddWithValue("@MinSalary", jobs.Min_salary);
+
+            if (jobs.Min_salary == null)
+                command.Parameters.AddWithValue("@MaxSalary", DBNull.Value);
+            else 
+                command.Parameters.AddWithValue("@MaxSalary", jobs.Max_salary);
 
             int id = Convert.ToInt32(command.ExecuteScalar());
 
             jobs.Job_Id = id;
-
-
-            Console.WriteLine("Data stored property.");
-            MessageBox.Show("El id de la fila insetada es: " + jobs.Job_Id);
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             int job_id = 0;
-            int.TryParse(textBox1.Text,out job_id);
             string nombre = txtNombre.Text;
-            decimal minSalary = 0;
-            decimal.TryParse(txtMin.Text,out minSalary);
-            decimal maxSalary = 0;
-            decimal.TryParse(txtMax.Text, out maxSalary);
 
-            Jobs jobs = new Jobs(job_id,nombre,minSalary,maxSalary);
+            decimal? min_salary = 0;
+            decimal? max_salary = 0;
+
+            if (txtMin.Text == null || txtMin.Text == "") 
+                min_salary = null;
+            else
+                min_salary = decimal.Parse(txtMin.Text);
+
+            if (txtMax.Text == null || txtMax.Text == "")
+                max_salary = null;
+            else
+                max_salary = decimal.Parse(txtMax.Text);
+
+            Jobs jobs = new Jobs(job_id,nombre,min_salary,max_salary);
 
 
             try
@@ -144,6 +229,67 @@ namespace ConexionBBDD
 
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Jobs jobToDelete = listBoxJobs.SelectedItem as Jobs;
 
+            int IdToDelete = jobToDelete.Job_Id;
+
+            string query = "DELETE FROM JOBS WHERE job_id = @IdToDelete";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            // Agregar el parámetro
+            command.Parameters.AddWithValue("@IdToDelete", IdToDelete);
+
+            // Ejecutar la consulta
+            int rowsAffected = command.ExecuteNonQuery();
+
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Se ha eliminado el trabajo con ID " + IdToDelete);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró ningún trabajo con ID " + IdToDelete);
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            listBoxJobs.Items.Clear();
+            List<Jobs> items = SelectJobs();
+
+            foreach (Jobs job in items)
+            {
+                listBoxJobs.Items.Add(job);
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombre.Text;
+
+            decimal? min_salary = 0;
+            decimal? max_salary = 0;
+
+            if (txtMin.Text == null || txtMin.Text == "")
+                min_salary = null;
+            else
+                min_salary = decimal.Parse(txtMin.Text);
+
+            if (txtMax.Text == null || txtMax.Text == "")
+                max_salary = null;
+            else
+                max_salary = decimal.Parse(txtMax.Text);
+
+            Jobs jobToEdit = listBoxJobs.SelectedItem as Jobs;
+
+            EditJobs(jobToEdit);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
