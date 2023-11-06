@@ -41,14 +41,15 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtMax = new System.Windows.Forms.TextBox();
             this.txtMin = new System.Windows.Forms.TextBox();
+            this.listBoxJobs = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnOpen
             // 
             this.btnOpen.BackColor = System.Drawing.Color.LightGreen;
-            this.btnOpen.Location = new System.Drawing.Point(616, 25);
+            this.btnOpen.Location = new System.Drawing.Point(13, 12);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(147, 51);
+            this.btnOpen.Size = new System.Drawing.Size(347, 38);
             this.btnOpen.TabIndex = 0;
             this.btnOpen.Text = "OPEN";
             this.btnOpen.UseVisualStyleBackColor = false;
@@ -58,9 +59,9 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.OrangeRed;
             this.btnClose.Enabled = false;
-            this.btnClose.Location = new System.Drawing.Point(616, 369);
+            this.btnClose.Location = new System.Drawing.Point(13, 517);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(147, 51);
+            this.btnClose.Size = new System.Drawing.Size(347, 37);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "CLOSE";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -69,7 +70,7 @@
             // btnInsert
             // 
             this.btnInsert.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnInsert.Location = new System.Drawing.Point(616, 102);
+            this.btnInsert.Location = new System.Drawing.Point(213, 72);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(147, 57);
             this.btnInsert.TabIndex = 2;
@@ -80,7 +81,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnDelete.Location = new System.Drawing.Point(616, 186);
+            this.btnDelete.Location = new System.Drawing.Point(213, 151);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(147, 57);
             this.btnDelete.TabIndex = 3;
@@ -90,7 +91,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEdit.Location = new System.Drawing.Point(616, 274);
+            this.btnEdit.Location = new System.Drawing.Point(213, 233);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(147, 57);
             this.btnEdit.TabIndex = 4;
@@ -100,7 +101,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 79);
+            this.label1.Location = new System.Drawing.Point(81, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 20);
             this.label1.TabIndex = 7;
@@ -109,7 +110,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(158, 79);
+            this.label2.Location = new System.Drawing.Point(61, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 8;
@@ -118,7 +119,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(295, 79);
+            this.label3.Location = new System.Drawing.Point(51, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 9;
@@ -127,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(464, 79);
+            this.label4.Location = new System.Drawing.Point(51, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 20);
             this.label4.TabIndex = 10;
@@ -136,38 +137,48 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(24, 102);
+            this.textBox1.Location = new System.Drawing.Point(28, 84);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(82, 26);
+            this.textBox1.Size = new System.Drawing.Size(129, 26);
             this.textBox1.TabIndex = 11;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(125, 102);
+            this.txtNombre.Location = new System.Drawing.Point(28, 139);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 26);
             this.txtNombre.TabIndex = 12;
             // 
             // txtMax
             // 
-            this.txtMax.Location = new System.Drawing.Point(445, 102);
+            this.txtMax.Location = new System.Drawing.Point(28, 263);
             this.txtMax.Name = "txtMax";
-            this.txtMax.Size = new System.Drawing.Size(140, 26);
+            this.txtMax.Size = new System.Drawing.Size(132, 26);
             this.txtMax.TabIndex = 13;
             // 
             // txtMin
             // 
-            this.txtMin.Location = new System.Drawing.Point(280, 102);
+            this.txtMin.Location = new System.Drawing.Point(28, 201);
             this.txtMin.Name = "txtMin";
             this.txtMin.Size = new System.Drawing.Size(129, 26);
             this.txtMin.TabIndex = 14;
+            // 
+            // listBoxJobs
+            // 
+            this.listBoxJobs.FormattingEnabled = true;
+            this.listBoxJobs.ItemHeight = 20;
+            this.listBoxJobs.Location = new System.Drawing.Point(13, 303);
+            this.listBoxJobs.Name = "listBoxJobs";
+            this.listBoxJobs.Size = new System.Drawing.Size(347, 204);
+            this.listBoxJobs.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(387, 594);
+            this.Controls.Add(this.listBoxJobs);
             this.Controls.Add(this.txtMin);
             this.Controls.Add(this.txtMax);
             this.Controls.Add(this.txtNombre);
@@ -203,6 +214,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtMax;
         private System.Windows.Forms.TextBox txtMin;
+        private System.Windows.Forms.ListBox listBoxJobs;
     }
 }
 

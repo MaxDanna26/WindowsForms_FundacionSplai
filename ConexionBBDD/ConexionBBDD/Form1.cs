@@ -20,6 +20,43 @@ namespace ConexionBBDD
             InitializeComponent();
         }
 
+       private List<Jobs> SelectJobs()
+        {
+            List<Jobs> jobs = new List<Jobs>();
+
+            string query = "SELECT * FROM JOBS";
+            SqlCommand command = new SqlCommand(query,connection);
+            
+            // Es lo que nos va a permitir leer de a varios
+            SqlDataReader records = command.ExecuteReader();
+
+            // Mientras haya datos por leer haz esto
+            while (records.Read())
+            {
+                int job_id = records.GetInt32(records.GetOrdinal("job_id"));
+
+                string job_title = records.GetString(records.GetOrdinal("job_title"));
+
+                decimal? min_salary = records.IsDBNull(records.GetOrdinal("min_salary"))
+                    ? null : (decimal?)records.GetDecimal(records.GetOrdinal("min_salary"));
+
+                decimal? max_salary = records.IsDBNull(records.GetOrdinal("max_salary"))
+                    ? null : (decimal?)records.GetDecimal(records.GetOrdinal("max_salary"));
+
+                // Creamos el job y lo agregamos a la lista para luego recorrerla
+
+                Jobs job = new Jobs(job_id,job_title,min_salary,max_salary);
+
+                jobs.Add(job);
+            }
+
+            records.Close();
+
+            return jobs;
+
+        }
+
+
         private void btnOpen_Click(object sender, EventArgs e)
         {
             try
@@ -83,13 +120,15 @@ namespace ConexionBBDD
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            int job_id = 0;
+            int.TryParse(textBox1.Text,out job_id);
             string nombre = txtNombre.Text;
-            int minSalary = 0;
-            int.TryParse(txtMin.Text,out minSalary);
-            int maxSalary = 0;
-            int.TryParse(txtMax.Text, out maxSalary);
+            decimal minSalary = 0;
+            decimal.TryParse(txtMin.Text,out minSalary);
+            decimal maxSalary = 0;
+            decimal.TryParse(txtMax.Text, out maxSalary);
 
-            Jobs jobs = new Jobs(nombre,minSalary,maxSalary);
+            Jobs jobs = new Jobs(job_id,nombre,minSalary,maxSalary);
 
 
             try

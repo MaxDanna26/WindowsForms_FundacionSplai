@@ -42,7 +42,7 @@ namespace TablasJobs
 
         }
 
-        public Jobs(string job_title,int min_salary,int max_salary)
+        public Jobs(int job_id,string job_title,decimal min_salary,decimal max_salary)
         {
             this.job_title = job_title;
             this.min_salary = min_salary;   
