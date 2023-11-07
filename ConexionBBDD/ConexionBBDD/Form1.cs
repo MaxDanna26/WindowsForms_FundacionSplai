@@ -18,10 +18,39 @@ namespace ConexionBBDD
         public Form1()
         {
             InitializeComponent();
+            OpenConection();
+            List<Jobs> items = SelectJobs();
+
+            foreach (Jobs job in items)
+            {
+                listBoxJobs.Items.Add(job);
+            }
         }
+
+       public void OpenConection()
+        {
+            try
+            {
+                connection = new SqlConnection(
+                    @"Data source = 79.143.90.12,54321;
+                    Initial Catalog=DannaEmployees;
+                    Persist Security Info=true;
+                    User Id = sa;
+                    Password = 123456789;");
+
+
+                connection.Open();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar conectarse a la BBDD!" + ex.Message);
+            }
+        } 
 
        private List<Jobs> SelectJobs()
         {
+            OpenConection();
             List<Jobs> jobs = new List<Jobs>();
 
             string query = "SELECT * FROM JOBS";
@@ -51,6 +80,7 @@ namespace ConexionBBDD
             }
 
             records.Close();
+            connection.Close();
 
             return jobs;
 
@@ -70,6 +100,7 @@ namespace ConexionBBDD
 
        private void EditJobs(Jobs jobToEdit)
         {
+            OpenConection();
             if (jobToEdit == null)
             {
                 MessageBox.Show("No ha seleccionado ningun Job!");
@@ -117,59 +148,12 @@ namespace ConexionBBDD
                 if (affected == 0) MessageBox.Show("No se ha modificado nada!");
                 else MessageBox.Show("Se ha editado correctamente!");
             }
-        }
-
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                connection = new SqlConnection(
-                    @"Data source = 79.143.90.12,54321;
-                    Initial Catalog=DannaEmployees;
-                    Persist Security Info=true;
-                    User Id = sa;
-                    Password = 123456789;") ;
-
-                
-                connection.Open();
-                MessageBox.Show("Se ha conectado!");
-                btnClose.Enabled = true;
-                btnOpen.Enabled = false;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al intentar conectarse a la BBDD!" + ex.Message);
-            }
-
-            List<Jobs> items = SelectJobs();
-
-            foreach (Jobs job in items)
-            {
-                listBoxJobs.Items.Add(job);
-            }
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                connection.Close();
-                MessageBox.Show("Se ha cerrado!");
-                btnOpen.Enabled = true;
-                btnClose.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al intentar conectarse a la BBDD!" + ex.Message);
-            }
-
-
+            connection.Close();
         }
 
         private void InsertJob(Jobs jobs)
         {
+            OpenConection();
             string query = $"INSERT INTO JOBS(job_title,min_salary,max_salary) " +
                            $"VALUES (@JobTitle,@MinSalary,@MaxSalary); " +
                            $"SELECT Scope_Identity()";
@@ -191,10 +175,12 @@ namespace ConexionBBDD
             int id = Convert.ToInt32(command.ExecuteScalar());
 
             jobs.Job_Id = id;
+            connection.Close();
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            OpenConection();
             int job_id = 0;
             string nombre = txtNombre.Text;
 
@@ -229,11 +215,12 @@ namespace ConexionBBDD
                     throw;
                 }
             }
-
+            connection.Close();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            OpenConection();
             Jobs jobToDelete = listBoxJobs.SelectedItem as Jobs;
 
             if(jobToDelete == null)
@@ -262,12 +249,13 @@ namespace ConexionBBDD
                     MessageBox.Show("No se encontró ningún trabajo con ID " + IdToDelete);
                 }
             }
-
+            connection.Close();
 
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            OpenConection();
             listBoxJobs.Items.Clear();
             List<Jobs> items = SelectJobs();
 
@@ -275,10 +263,12 @@ namespace ConexionBBDD
             {
                 listBoxJobs.Items.Add(job);
             }
+            connection.Close();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            OpenConection();
             string nombre = txtNombre.Text;
 
             decimal? min_salary = 0;
@@ -297,16 +287,18 @@ namespace ConexionBBDD
             Jobs jobToEdit = listBoxJobs.SelectedItem as Jobs;
 
             EditJobs(jobToEdit);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            connection.Close();
         }
 
         private void listBoxJobs_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedJob();
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            FormEmployees formEmployees = new FormEmployees();
+            formEmployees.ShowDialog(); 
         }
     }
 }

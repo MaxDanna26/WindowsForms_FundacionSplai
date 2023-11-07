@@ -1,0 +1,10 @@
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\bin\Debug\WinFormsWithORM.exe.config
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\bin\Debug\WinFormsWithORM.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\bin\Debug\WinFormsWithORM.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\obj\Debug\WinFormsWithORL.csproj.AssemblyReference.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\obj\Debug\WinFormsWithORM.Properties.Resources.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\obj\Debug\WinFormsWithORL.csproj.GenerateResource.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\obj\Debug\WinFormsWithORL.csproj.CoreCompileInputs.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\obj\Debug\WinFormsWithORM.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\obj\Debug\WinFormsWithORM.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\WinFormsWithORM\WinFormsWithORM\obj\Debug\WinFormsWithORM.Form1.resources

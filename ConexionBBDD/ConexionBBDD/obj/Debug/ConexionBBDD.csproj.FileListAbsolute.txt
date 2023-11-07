@@ -8,3 +8,4 @@ C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Deb
 C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.csproj.CoreCompileInputs.cache
 C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.exe
 C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\ConexionBBDD\ConexionBBDD\obj\Debug\ConexionBBDD.FormEmployees.resources

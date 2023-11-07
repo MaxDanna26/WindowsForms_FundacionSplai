@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnOpen = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,30 +39,8 @@
             this.listBoxJobs = new System.Windows.Forms.ListBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.btnEmployees = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.BackColor = System.Drawing.Color.LightGreen;
-            this.btnOpen.Location = new System.Drawing.Point(13, 12);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(347, 38);
-            this.btnOpen.TabIndex = 0;
-            this.btnOpen.Text = "OPEN";
-            this.btnOpen.UseVisualStyleBackColor = false;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnClose.Enabled = false;
-            this.btnClose.Location = new System.Drawing.Point(13, 517);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(347, 37);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "CLOSE";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnInsert
             // 
@@ -148,7 +124,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.Info;
             this.btnRefresh.Location = new System.Drawing.Point(12, 244);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(348, 41);
@@ -168,12 +144,24 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // btnEmployees
+            // 
+            this.btnEmployees.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEmployees.Location = new System.Drawing.Point(13, 522);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(347, 49);
+            this.btnEmployees.TabIndex = 17;
+            this.btnEmployees.Text = "Employes";
+            this.btnEmployees.UseVisualStyleBackColor = false;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(387, 594);
+            this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.listBoxJobs);
             this.Controls.Add(this.txtMin);
@@ -185,20 +173,14 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnOpen);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnOpen;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label2;
@@ -210,6 +192,7 @@
         private System.Windows.Forms.ListBox listBoxJobs;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnEmployees;
     }
 }
 
