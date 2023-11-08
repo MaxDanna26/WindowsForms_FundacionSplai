@@ -55,7 +55,6 @@
             this.txtBoxApellido = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.rBtnApellido = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -190,7 +189,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(333, 34);
+            this.listBox1.Location = new System.Drawing.Point(331, 34);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(893, 444);
             this.listBox1.TabIndex = 16;
@@ -214,6 +213,7 @@
             this.txtBoxCiudad.Name = "txtBoxCiudad";
             this.txtBoxCiudad.Size = new System.Drawing.Size(230, 26);
             this.txtBoxCiudad.TabIndex = 18;
+            this.txtBoxCiudad.TextChanged += new System.EventHandler(this.txtBoxCiudad_TextChanged);
             // 
             // label9
             // 
@@ -261,6 +261,7 @@
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(230, 26);
             this.txtBoxNombre.TabIndex = 23;
+            this.txtBoxNombre.TextChanged += new System.EventHandler(this.txtBoxNombre_TextChanged);
             // 
             // txtBoxApellido
             // 
@@ -269,6 +270,7 @@
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(230, 26);
             this.txtBoxApellido.TabIndex = 26;
+            this.txtBoxApellido.TextChanged += new System.EventHandler(this.txtBoxApellido_TextChanged);
             // 
             // label12
             // 
@@ -291,24 +293,12 @@
             this.rBtnApellido.UseVisualStyleBackColor = true;
             this.rBtnApellido.CheckedChanged += new System.EventHandler(this.rBtnApellido_CheckedChanged);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.Location = new System.Drawing.Point(1293, 494);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 71);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chocolate;
             this.ClientSize = new System.Drawing.Size(1510, 620);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBoxApellido);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.rBtnApellido);
@@ -372,6 +362,5 @@
         private System.Windows.Forms.TextBox txtBoxApellido;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton rBtnApellido;
-        private System.Windows.Forms.Button button1;
     }
 }

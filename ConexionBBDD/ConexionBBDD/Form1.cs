@@ -18,7 +18,6 @@ namespace ConexionBBDD
         public Form1()
         {
             InitializeComponent();
-            OpenConection();
             List<Jobs> items = SelectJobs();
 
             foreach (Jobs job in items)
