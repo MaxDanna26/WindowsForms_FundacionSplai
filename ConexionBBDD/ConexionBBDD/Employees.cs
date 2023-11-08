@@ -21,9 +21,9 @@ namespace ConexionBBDD
 
         public override string ToString()
         {
-            return $"{employee_id} - {first_name} - {last_name} - {email} - {phone_number} - " +
-                   $"{hire_date} - {job_id} - {salary} - {salary} - " +
-                   $"{manager_id} - {department_id}";
+            return $"    {employee_id}    -   {first_name}    -    {last_name}    -    {email}   - {phone_number} - " +
+                   $"   {hire_date}    -    {job_id}    -    {salary}    -    {salary} - " +
+                   $"   {manager_id}    -    {department_id}";
         }
 
         public int Employee_id

@@ -1,0 +1,10 @@
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\bin\Debug\FormLINQ.exe.config
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\bin\Debug\FormLINQ.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\bin\Debug\FormLINQ.pdb
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\obj\Debug\FormLINQ.csproj.AssemblyReference.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\obj\Debug\FormLINQ.Form1.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\obj\Debug\FormLINQ.Properties.Resources.resources
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\obj\Debug\FormLINQ.csproj.GenerateResource.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\obj\Debug\FormLINQ.csproj.CoreCompileInputs.cache
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\obj\Debug\FormLINQ.exe
+C:\Users\Maxim\OneDrive\Escritorio\WindowsForm\FormLINQ\FormLINQ\obj\Debug\FormLINQ.pdb

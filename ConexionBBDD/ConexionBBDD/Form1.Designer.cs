@@ -45,9 +45,9 @@
             // btnInsert
             // 
             this.btnInsert.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnInsert.Location = new System.Drawing.Point(213, 67);
+            this.btnInsert.Location = new System.Drawing.Point(11, 264);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(147, 44);
+            this.btnInsert.Size = new System.Drawing.Size(187, 44);
             this.btnInsert.TabIndex = 2;
             this.btnInsert.Text = "Insertar Job";
             this.btnInsert.UseVisualStyleBackColor = false;
@@ -56,9 +56,9 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnDelete.Location = new System.Drawing.Point(213, 129);
+            this.btnDelete.Location = new System.Drawing.Point(11, 347);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(147, 41);
+            this.btnDelete.Size = new System.Drawing.Size(187, 41);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Eliminar Job";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -67,7 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 56);
+            this.label2.Location = new System.Drawing.Point(71, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 8;
@@ -76,7 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 121);
+            this.label3.Location = new System.Drawing.Point(61, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 9;
@@ -85,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(72, 185);
+            this.label4.Location = new System.Drawing.Point(61, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 20);
             this.label4.TabIndex = 10;
@@ -93,41 +93,41 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(28, 81);
+            this.txtNombre.Location = new System.Drawing.Point(13, 64);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(170, 26);
+            this.txtNombre.Size = new System.Drawing.Size(185, 26);
             this.txtNombre.TabIndex = 12;
             // 
             // txtMax
             // 
-            this.txtMax.Location = new System.Drawing.Point(28, 208);
+            this.txtMax.Location = new System.Drawing.Point(13, 201);
             this.txtMax.Name = "txtMax";
-            this.txtMax.Size = new System.Drawing.Size(170, 26);
+            this.txtMax.Size = new System.Drawing.Size(185, 26);
             this.txtMax.TabIndex = 13;
             // 
             // txtMin
             // 
-            this.txtMin.Location = new System.Drawing.Point(28, 144);
+            this.txtMin.Location = new System.Drawing.Point(13, 137);
             this.txtMin.Name = "txtMin";
-            this.txtMin.Size = new System.Drawing.Size(170, 26);
+            this.txtMin.Size = new System.Drawing.Size(185, 26);
             this.txtMin.TabIndex = 14;
             // 
             // listBoxJobs
             // 
             this.listBoxJobs.FormattingEnabled = true;
             this.listBoxJobs.ItemHeight = 20;
-            this.listBoxJobs.Location = new System.Drawing.Point(13, 303);
+            this.listBoxJobs.Location = new System.Drawing.Point(225, 29);
             this.listBoxJobs.Name = "listBoxJobs";
-            this.listBoxJobs.Size = new System.Drawing.Size(347, 204);
+            this.listBoxJobs.Size = new System.Drawing.Size(751, 464);
             this.listBoxJobs.TabIndex = 15;
             this.listBoxJobs.SelectedIndexChanged += new System.EventHandler(this.listBoxJobs_SelectedIndexChanged);
             // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.SystemColors.Info;
-            this.btnRefresh.Location = new System.Drawing.Point(12, 244);
+            this.btnRefresh.Location = new System.Drawing.Point(617, 522);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(348, 41);
+            this.btnRefresh.Size = new System.Drawing.Size(359, 49);
             this.btnRefresh.TabIndex = 16;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -136,9 +136,9 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEdit.Location = new System.Drawing.Point(213, 187);
+            this.btnEdit.Location = new System.Drawing.Point(11, 421);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(147, 41);
+            this.btnEdit.Size = new System.Drawing.Size(187, 41);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Editar Job";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -151,7 +151,7 @@
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(347, 49);
             this.btnEmployees.TabIndex = 17;
-            this.btnEmployees.Text = "Employes";
+            this.btnEmployees.Text = "Filtrar employees";
             this.btnEmployees.UseVisualStyleBackColor = false;
             this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
@@ -160,7 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(387, 594);
+            this.ClientSize = new System.Drawing.Size(1008, 594);
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.listBoxJobs);
