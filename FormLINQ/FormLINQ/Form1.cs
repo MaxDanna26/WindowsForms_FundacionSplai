@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,8 +18,8 @@ namespace FormLINQ
         public Form1()
         {
             InitializeComponent();
-            CargarData();
             CargarComboBox();
+            CargarData();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -83,17 +84,25 @@ namespace FormLINQ
 
         }
 
-        private void comboBoxCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxCiudad_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            string opcion = comboBoxCiudad.SelectedIndex.ToString();
 
-            IQueryable<employees> data = CrearData();
-            data = data.Where(emp => emp.departments.locations.city.Contains(opcion));
+            string opcion = comboBoxCiudad.SelectedItem.ToString();
 
-           // la data es un innerJoin de las tablas hasta llegar a city
+            if (opcion != null || opcion != "")
+            {
+                // la data es un innerJoin de las tablas hasta llegar a city
 
-            dataGridView1.DataSource = data.ToList();
-           
+                LinqToSqlDataContext dc = new LinqToSqlDataContext();
+
+                var data = from emp in dc.employees
+                           join department in dc.departments on emp.department_id equals department.department_id
+                           join location in dc.locations on department.location_id equals location.location_id
+                           where location.city == opcion
+                           select emp;
+
+                dataGridView1.DataSource = data.ToList();
+            }
         }
     }
 }

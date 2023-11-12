@@ -119,7 +119,7 @@
             this.comboBoxCiudad.Name = "comboBoxCiudad";
             this.comboBoxCiudad.Size = new System.Drawing.Size(306, 28);
             this.comboBoxCiudad.TabIndex = 48;
-            //this.comboBoxCiudad.SelectedIndexChanged += new System.EventHandler(this.comboBoxCiudad_SelectedIndexChanged);
+            this.comboBoxCiudad.SelectedIndexChanged += new System.EventHandler(this.comboBoxCiudad_SelectedIndexChanged_1);
             // 
             // locationsBindingSource
             // 
