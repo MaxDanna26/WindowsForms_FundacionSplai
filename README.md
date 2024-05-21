@@ -1,5 +1,5 @@
 
-![Fundacion Splai Logo]([https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/42_Logo.svg/220px-42_Logo.svg.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.facebook.com%2FFundacionEsplai%2F%3Flocale2%3Des_LA&psig=AOvVaw1Uvc7M3aNSv6DFub3SYqZr&ust=1716399674505000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMjOmJOln4YDFQAAAAAdAAAAABAE))
+![Fundacion Splai Logo]([https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/42_Logo.svg/220px-42_Logo.svg.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.facebook.com%2FFundacionEsplai%2F%3Flocale2%3Des_LA&psig=AOvVaw1Uvc7M3aNSv6DFub3SYqZr&ust=1716399674505000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMjOmJOln4YDFQAAAAAdAAAAABAE)
 
 ## Descripción
 
