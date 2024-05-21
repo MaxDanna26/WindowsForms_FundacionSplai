@@ -1,6 +1,4 @@
-[[[
-![Fundacion Splai Logo]([https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.facebook.com%2FFundacionEsplai%2F%3Flocale2%3Des_LA&psig=AOvVaw1Uvc7M3aNSv6DFub3SYqZr&ust=1716399674505000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMjOmJOln4YDFQAAAAAdAAAAABAE)](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffundacionesplai.ofertas-trabajo.infojobs.net%2F&psig=AOvVaw14WIk9Bsb576R5zTYt0yzN&ust=1716400915241000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjcveOpn4YDFQAAAAAdAAAAABAE)
-](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fc%2FFundaci%25C3%25B3nEsplaiCC%2Fvideos&psig=AOvVaw14WIk9Bsb576R5zTYt0yzN&ust=1716400915241000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjcveOpn4YDFQAAAAAdAAAAABAR)](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fc%2FFundaci%25C3%25B3nEsplaiCC%2Fvideos&psig=AOvVaw14WIk9Bsb576R5zTYt0yzN&ust=1716400915241000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjcveOpn4YDFQAAAAAdAAAAABAR)](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fc%2FFundaci%25C3%25B3nEsplaiCC%2Fvideos&psig=AOvVaw14WIk9Bsb576R5zTYt0yzN&ust=1716400915241000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjcveOpn4YDFQAAAAAdAAAAABAR)
+
 ## Descripción
 
 En este repositorio, compartiré los ejercicios y proyectos que he completado durante mi tiempo en la Fundacion Splai Barcelona.
